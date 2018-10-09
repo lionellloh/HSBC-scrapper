@@ -1,3 +1,12 @@
+# TODO: output.csv should have column names
+# TODO: arg flags for different starting state to support "threading"
+# TODO: readme.md for reference
+# TODO: reduce redundant time.sleeps
+# TODO: Time measurements
+# TODO: Phantom JS switch
+
+
+
 from selenium import webdriver
 from selenium.webdriver.common.action_chains import ActionChains
 import time
