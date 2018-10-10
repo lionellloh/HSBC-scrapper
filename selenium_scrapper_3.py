@@ -37,16 +37,16 @@ def start():
 
         browser.find_element_by_id("arrowid_hdx_dijits_form_Select_{}".format(button)).click()
 
-        print("{}".format(button))
+        # print("{}".format(button))
 
         actions = ActionChains(browser)
         actions.send_keys(u'\ue015')
         actions.send_keys(u'\ue007')
         actions.perform()
 
-        print("{} pressed".format(button))
+        # print("{} pressed".format(button))
 
-        time.sleep(1)
+        time.sleep(0.4)
 
     browser.find_element_by_id("btnPropertyEvaluation").click()
 
@@ -66,7 +66,7 @@ def field_iter(i):
 
         actions.perform()
 
-        time.sleep(1)
+        time.sleep(0.5)
 
         if i+1 <= 5:
             field_iter(i+1)
@@ -78,10 +78,10 @@ def field_iter(i):
         current_text = browser.find_elements_by_xpath('//*[@id="hdx_dijits_form_Select_{}_Text"]'.format(i))[0].text
         print("Old Text:", old_text)
         print("Current Text:", current_text)
-        time.sleep(1)
+        time.sleep(0.5)
 
         browser.find_element_by_id("btnPropertyEvaluation").click()
-        time.sleep(1)
+        time.sleep(0.5)
 
         elems = browser.find_elements_by_class_name('propvaluationresult')
         elems_text = [e.text for e in elems]
